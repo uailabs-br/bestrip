@@ -11,10 +11,11 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   
   return {
+    base: '/',
     plugins: [react(), tailwindcss()],
     define: {
       // Expose GEMINI_API_KEY to the client
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || env.VITE_GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || env.VITE_GEMINI_API_KEY || ""),
     },
     resolve: {
       alias: {
