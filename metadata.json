@@ -1,0 +1,5 @@
+{
+  "name": "Bestrip",
+  "description": "A travel planning app that uses user profiling to provide curated city and neighborhood recommendations.",
+  "requestFramePermissions": []
+}
